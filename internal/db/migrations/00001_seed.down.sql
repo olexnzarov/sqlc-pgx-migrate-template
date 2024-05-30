@@ -1,0 +1,2 @@
+TRUNCATE books;
+TRUNCATE authors;

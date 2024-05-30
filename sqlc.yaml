@@ -1,0 +1,31 @@
+version: "2"
+sql:
+  - queries: "internal/db/queries/authors.sql"
+    schema: "internal/db/migrations"
+    engine: "postgresql"
+    gen:
+      go:
+        out: "internal/db/repositories/authors"
+        package: "authors"
+        sql_package: "pgx/v5"
+
+  - queries: "internal/db/queries/books.sql"
+    schema: "internal/db/migrations"
+    engine: "postgresql"
+    gen:
+      go:
+        out: "internal/db/repositories/books"
+        package: "books"
+        sql_package: "pgx/v5"
+overrides:
+  go:
+    overrides:
+      - db_type: "date"
+        nullable: false
+        go_type:
+          import: "time"
+          type: "Time"
+      - db_type: "uuid"
+        nullable: false
+        go_type:
+          type: "string"
