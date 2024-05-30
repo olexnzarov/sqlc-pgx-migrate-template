@@ -8,5 +8,6 @@ cleanup-template:
 	@rm docker-compose.yaml
 	@rm Dockerfile
 	@rm README.md
+	@rm LICENSE
 	@rm -rf .git
 	@git init
