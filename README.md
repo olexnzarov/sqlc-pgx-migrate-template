@@ -4,7 +4,7 @@ This is a boilerplate template for the following combination of libraries: [sqlc
 **How to use this code?**
 
 - Put your migrations into the `internal/db/migrations` directory.
-- Put your queries into the `internal/db/queries directory` and add them to the `sqlc.yaml` configuration.
+- Put your queries into the `internal/db/queries` directory and add them to the `sqlc.yaml` configuration.
 - Use the `db.Setup` function to run the migrations and get the pgx connection pool.
 
 ## Running the example
